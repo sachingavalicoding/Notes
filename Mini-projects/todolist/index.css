@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.input__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+/* Stylish Input Box */
+.input__container input {
+    padding: 15px;
+    font-size: 1rem;
+    width: 300px;
+    border: 2px solid #444;
+    border-radius: 8px;
+    background-color: #2b2b2b;
+    color: white;
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+.input__container input:focus {
+    border-color: #00b4d8;
+    box-shadow: 0 0 8px #00b4d8;
+}
+
+/* Add Button Style */
+.input__container span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #00b4d8;
+    background-color: #1f4068;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.input__container span:hover {
+    background-color: #16213e;
+    color: #f0e7d8;
+    transform: scale(1.1);
+}
+
+/* Todo List */
+.todos__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.todo {
+    padding: 10px 20px;
+    font-size: 1rem;
+    width: 100%;
+    color: white;
+    background-color: #2b2b2b;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    transition: 0.3s ease-in-out;
+    list-style: none;
+}
+
+.todo:hover {
+    background-color: #3b3b3b;
+    transform: translateX(5px);
+}
+
+/* Delete Button */
+.todo button {
+    background-color: transparent;
+    border: none;
+    color: #ff4c4c;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.todo button:hover {
+    color: #ff0000;
+}
