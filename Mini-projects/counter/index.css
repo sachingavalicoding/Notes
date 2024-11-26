@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(15, 13, 13);
+}
+
+h1{
+    font-size: 4rem;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+
+main
+{
+    
+    padding: 2rem 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    width: max-content;
+    color: white;
+    margin: 6rem auto;
+    transition: all 0.3s linear;
+    box-shadow: rgba(227, 13, 13, 0.25) 0px 54px 55px, rgba(255, 0, 0, 0.12) 0px -12px 30px, rgba(255, 0, 0, 0.12) 0px 4px 6px, rgba(255, 0, 0, 0.17) 0px 12px 13px, rgba(255, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+span{
+    font-size: 3rem;
+    font-weight: 400;
+    box-shadow: rgba(227, 13, 13, 0.25) 0px 54px 55px, rgba(255, 0, 0, 0.12) 0px -12px 30px, rgba(255, 0, 0, 0.12) 0px 4px 6px, rgba(255, 0, 0, 0.17) 0px 12px 13px, rgba(255, 0, 0, 0.09) 0px -3px 5px;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+p{
+    font-size: 8rem;
+    font-weight: 600;
+}
+
+
+/* media query  */
+@media only screen and (max-width: 700px) {
+    p {
+      font-size: 5rem;
+    }
+    span{
+        font-size: 2rem;
+    }
+    main{
+        padding: 2rem 3.4rem;
+    }
+  }
