@@ -1,0 +1,6 @@
+normal  -#FA6775
+dark - #F52549
+light- #F1F1F2
+dark- #2A3132
+
+flow -> Home page -> sign in -> sign up 

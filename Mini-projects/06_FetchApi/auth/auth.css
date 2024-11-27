@@ -1,0 +1,120 @@
+.signup__container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup__wraper{
+    background-color: var(--light-color);
+    display: grid;
+    width: 80%;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.signin__navigation{
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.signin__navigation > p{
+    color: var(--main-color);
+    font-weight: 400;
+}
+
+.signup__content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.signup__content h2 {
+    font-weight: 700;
+    color: var(--dark-color);
+}
+.signup__content > h3 {
+    font-weight: 400;
+    font-size: 0.93rem;
+    color: rgba(76, 76, 76, 0.97);
+}
+
+.signup__content > form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.signup__content > form > .row{
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    
+}
+
+.row > input{
+    padding: 10px 30px;
+    width: 25rem;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid transparent;
+}
+
+input:focus{
+    border: 2px solid var(--main-color);
+}
+ label{
+    font-size: 0.95rem;
+    font-weight: 300;
+}
+.signup__image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 3rem;
+}
+.signup__content{
+    padding: 1.5rem 0rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+ /*  lg device  */
+
+ @media screen and (max-width:1280px) {
+   .signup__wraper{
+    grid-template-columns: 1fr;
+   }
+   .signup__image img{
+    width: 60%;
+   }
+ }
+
+ @media screen and (max-width:640px) {
+    .signup__wraper{
+        width: 100%;
+    }
+ }
+ /*   Mid  device  */
+
+ @media screen and (max-width:768px) {
+    .signup__wraper{
+        width: 100%;
+    }
+    .signup__image img{
+        width: 100%;
+       }
+    .row > input{
+        width: 17rem;
+    }
+ }

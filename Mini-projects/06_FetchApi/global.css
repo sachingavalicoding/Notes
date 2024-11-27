@@ -1,5 +1,115 @@
-*, *::after , *::before{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/*  ==============Navbar============== */
+
+header{
+    width: 100%;
+    background-color: var(--dark-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--light-color);
+    padding: 0.7rem 3rem;
 }
+
+header > h2 {
+    font-weight: 500;
+}
+
+nav{
+    display: flex;
+    gap: 1.3rem;
+}
+nav > a {
+    color: var(--light-color);
+    transition: all 0.3s ease in;
+}
+ nav > a:focus{
+    color: var(--main-color);
+ }
+
+ .login__container{
+    display: flex;
+    gap: 1.2rem;
+ }
+
+ .sm__nav{
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    width: 100%;
+    position: absolute;
+    top: 4.3rem;
+    padding: 2rem 0rem;
+    left: 0;
+ }
+
+ .sm__nav > a {
+    width: 100%;
+    padding: 0.7rem 0rem;
+    transition: all 0.3s ease in;
+    text-align: center;
+    color: var(--light-color);
+ }
+ .sm__nav > a:hover{
+    background-color: var(--light-color);
+    color: var(--dark-color);
+ }
+
+ .flex{
+    display: flex;
+ }
+
+ #menu{
+    display: none;
+ }
+
+
+
+ /*  Button  */
+
+ .btn{
+    padding: 15px 40px;
+    color: white;
+    border-radius: 25px;
+    border: 0;
+    outline: 0;
+    width: max-content;
+    transition: all 0.3s ease-in;
+    box-shadow: rgba(253, 2, 2, 0.25) 0px 54px 55px, rgba(255, 0, 0, 0.12) 0px -12px 30px, rgba(255, 0, 0, 0.12) 0px 4px 6px, rgba(255, 0, 0, 0.17) 0px 12px 13px, rgba(255, 0, 0, 0.09) 0px -3px 5px;
+ }
+
+ .btn-main{
+    color: var(--light-color);
+    background-color: var(--main-dark-color);
+ }
+
+ .btn-main:hover{
+    color:white;
+    background-color: var(--main-color);
+}
+
+ /*  media Q */
+
+ /*  Small  device  */
+
+ @media screen and (max-width:640px) {
+    header > h2 {
+        font-size: 2rem;
+    }
+ }
+ /*   Mid  device  */
+
+ @media screen and (max-width:768px) {
+   nav{
+    display: none;
+   }  
+
+   #menu{
+    display: block;
+   }
+ }
+ /*   Lg  device  */
+
+ @media screen and (max-width:1024px) {
+    
+ }
