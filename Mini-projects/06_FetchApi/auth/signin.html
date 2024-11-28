@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Com</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css"
+      integrity="sha512-6p+GTq7fjTHD/sdFPWHaFoALKeWOU9f9MPBoPnvJEWBkGS4PKVVbCpMps6IXnTiXghFbxlgDE8QRHc3MU91lJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../global.css" />
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="./auth.css" />
+  </head>
+  <body>
+    <!--  Sign up page  -->
+    <section class="signup__container">
+      <div class="signup__wraper">
+        <div class="signin__navigation">
+          <p>Create an Account ?</p>
+          <button class="btn"><a href="./signin.html"> REGISTER </a></button>
+        </div>
+        <div class="signup__image">
+          <img src="../assets/auth-img.png" alt="" />
+        </div>
+        <div class="signup__content">
+          <h2>Welcome to Shop Max</h2>
+          <h3>Login To Your Account</h3>
+          <form action="">
+            <div class="row">
+              <label for="email"> Email </label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter email ..."
+                required
+              />
+            </div>
+            <div class="row">
+              <label for="password"> Password </label>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Enter password ..."
+                required
+              />
+            </div>
+
+            <button id="signin" class="btn btn-main">Sign in</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script src="./signin.js"></script>
+  </body>
+</html>
