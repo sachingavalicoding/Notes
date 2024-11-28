@@ -38,6 +38,7 @@ const showCards = (data) => {
         
 
         showBtn.addEventListener("click" , ()=> {
+            sidebar.classList.toggle("sidebarVisible");
             showDisplayCard(product);
         })
     });
@@ -73,4 +74,11 @@ menubar.addEventListener("click" , () => {
 })
 homeBack.addEventListener("click" , () => {
     window.location.href = "../index.html";
+})
+
+document.querySelectorAll(".btn-product").forEach((button) => {
+    button.addEventListener("click" , () => {
+        console.log(button)
+        sidebar.classList.toggle("sidebarVisible");
+    })
 })
