@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    background-color: aliceblue;
+}
+
+.app{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container{
+    width: 80%;
+    margin: 50px auto;
+}
+
+.heading{
+    text-align: center;
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    justify-content: center;
+}
+
+button{
+    padding: 14px 25px;
+    color: white;
+    border-radius: 8px;
+    background-color: black;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+button:hover{
+    background-color: white;
+    color: black;
+}
+.center{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+img{
+    display: block;
+    width: 300px;
+}
+
+.plant-img{
+    transition: all 0.4s ease-in;
+}
+
+.responsive__container{
+    width: 30rem;
+}
+
+@media screen and (max-width:800px) {
+    .responsive__container{
+        width: 95%;
+    }
+}
+
+
+.code-link{
+    padding: 8px 28px;
+    border: 1px solid rgb(29, 28, 28);
+    border-radius: 8px;
+    color: black;
+    font-size: 1.2rem;
+    text-decoration: none;
+}

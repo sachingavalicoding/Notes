@@ -1,0 +1,87 @@
+Life Cycle of React components 
+
+Life cycle methods are those  methods that tells about life cycle about any component. 
+
+There are 3 phases of life cycle of React components 
+
+1. Mounting(placing Component)
+2. Updating (updating in component)
+3. Unmounting(remove connection of components )
+
+
+Life cycle methods are default available in class based Components only .
+Function based components does not provide any default life cycle method. if we want to achive life cycle methods in functional based component we can take help of hooks such as useEffect hook 
+
+
+3 phases of life cycle that's represents different types of life span of component 
+
+1.Mouting :- How to component is created and how to render it on UI.
+2.Updating :- Update phase start when user perform any action on to UI . like click on button , hover , form submission etc 
+3.unMounting : unmounting phase has only one method that is componentShouldUnmount(). this method return an function in which we can stop or clear ongoing tasks in the current component. 
+ 	      --- Unmounting phase is occurs when user navigates one component to another component .
+
+
+A) Mounting phase 
+   Mounting phase having 4 in built in methods 
+
+
+1.constructor()
+2.getDerivedStateFromProps()
+3.render()
+4.componentDidMount()
+
+1.constructor :-
+---Constructor excute only one time .
+---IT is best place where initialization of variable and state bcz it excute only one's so that same state or  variable will not get reinitialise again and again 
+---constructor is only used for  initialization.
+
+
+2.getDerivedStateFromProps()
+---Is second method of mounting phase .
+---excute after the constructor and it is used to accpect props form parent component we can write javascript logic in that using props 
+---basically is change current component state on basic of props 
+
+3.render()
+---it excute after getDerivedStateFromProps().
+---render function return jsx . render method is used to display content into UI.
+---render function is used to display content in UI. 
+
+4.componentDIdMount()
+---this method excute after the render method .
+---one's jsx is render react can perform calculation and perform side effect .
+---multiple side effects are fetching data and network related operations that perform.
+---if we performing or handling side effects in comoponentDidMount() function after render method , render methods can excute faster before this methods which will help to enhance the user experience 
+---it Excute only one time.
+
+B)Updating phase 
+ 
+updating phase methods 
+1.getDerivedStateFromProps()
+2.shouldCompoentUpdate();
+3.getSnapshotBeforeUpdate()
+4.componentDidUpdate()
+5.render()
+
+1.getDerivedStateFromProps():- is static phase where getting all states and props of current component
+ 
+2.shouldCompoentUpdate() :- is comparing previous state and current state of component.
+---if there are any changes then it will return true either return false.
+---if method returns true then only remaining methods of updating phase will get excuted.
+
+3.getSnapshotBeforeUpdate() :- this method will excute only if excute only if shouldCompoentUpdate() method returns true this method store the previous value of state with it and we can used it if we required.
+
+4.render() :- this method is used to display updated jsx on UI.
+
+5.componentDidUpdate() :- this method will check for the changes into the state and based on that it will handle the side effects .
+
+
+C)Unmounting Phase 
+
+---unmounting phase having only one method called componentDidUnMount();
+
+1. componentDidUnMount()- it used to clear tasks in current component when we go to next page . it we used any timer function in component when unmounting  our component we have to clear intervals and timer .
+ 
+
+
+
+	

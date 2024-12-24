@@ -14,10 +14,22 @@ const FormCreate = () => {
         ...formData,
         [e.target.name ]: e.target.value, 
       })
+
+     
   }
 
   const handleSubmit = () => {
-    alert( ` Welcome ${formData.username} Your Password is ${formData.password}`)
+    alert(
+      `Form Data :    Username : ${formData.username} Email ${formData.email} Password ${formData.password}`
+    )
+
+    setFormData(
+      {
+        username:"",
+        password:"",
+        email:""
+      }
+    )
   }
   return (
     <div className="w-full h-screen flex items-center justify-center">
@@ -27,7 +39,6 @@ const FormCreate = () => {
           className="px-6 py-3 rounded-lg shadow-2xl border-1 border-black "
           type="text"
           name="username"
-          id="username"
           placeholder="Username..."
           value={formData.username}
           onChange={handleChange}
@@ -36,7 +47,6 @@ const FormCreate = () => {
           className="px-6 py-3 rounded-lg shadow-2xl border-1 border-black "
           type="email"
           name="email"
-          id="email"
           placeholder="Email..."
           value={formData.email}
           onChange={handleChange}
@@ -45,7 +55,6 @@ const FormCreate = () => {
           className="px-6 py-3 rounded-lg shadow-2xl border-1 border-black "
           type="password"
           name="password"
-          id="password"
           placeholder="Password..."
           value={formData.password}
           onChange={handleChange}

@@ -6,56 +6,51 @@ const FormWithArray = () => {
     email: "",
     password: "",
   });
-  const [users , setUsers] = useState([]);
+  const [users, setUsers] = useState([]);
 
   const handleChange = (e) => {
-    // using spread we retore our not change
-
-    const {name , value  } = e.target;
+    const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value ,
+      [name]: value,
     });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setUsers([...users , formData]);
+    setUsers([...users, formData]);
+    setFormData({ username: "", email: "", password: "" }); // Reset form
   };
+
   return (
-    <div className="w-full h-screen flex items-center justify-center">
+    <div className="w-full h-screen flex items-center flex-col justify-center">
       <form
-        method=""
         onSubmit={handleSubmit}
-        className=" bg-slate-200 w-96 h-96 rounded-xl shadow-lg flex justify-center items-center flex-col gap-6 "
+        className="bg-slate-200 w-96 h-96 rounded-xl shadow-lg flex justify-center items-center flex-col gap-6 "
       >
-        <h2 className="font-semibold text-red-400 uppercase text-4xl ">
-          {" "}
-          Sign Up{" "}
+        <h2 className="font-semibold text-red-400 uppercase text-4xl">
+          Sign Up
         </h2>
         <input
-          className="px-6 py-3 rounded-lg shadow-2xl border-1 border-black "
+          className="px-6 py-3 rounded-lg shadow-2xl border-1 border-black"
           type="text"
           name="username"
-          id="username"
           placeholder="Username..."
           value={formData.username}
           onChange={handleChange}
         />
         <input
-          className="px-6 py-3 rounded-lg shadow-2xl border-1 border-black "
+          className="px-6 py-3 rounded-lg shadow-2xl border-1 border-black"
           type="email"
           name="email"
-          id="email"
           placeholder="Email..."
           value={formData.email}
           onChange={handleChange}
         />
         <input
-          className="px-6 py-3 rounded-lg shadow-2xl border-1 border-black "
+          className="px-6 py-3 rounded-lg shadow-2xl border-1 border-black"
           type="password"
           name="password"
-          id="password"
           placeholder="Password..."
           value={formData.password}
           onChange={handleChange}
@@ -64,19 +59,19 @@ const FormWithArray = () => {
           type="submit"
           className="px-8 py-3 text-white rounded-lg bg-slate-800"
         >
-          {" "}
-          Sign Up  {" "}
+          Sign Up
         </button>
       </form>
 
-      <div>
-        <p> {formData.username} </p>
-        <p> {formData.password} </p>
-        {
-            users.map((ele , index) => {
-                return (<p key={index}> {ele} </p> )
-            })
-        }
+      <div className="ml-6">
+        <h3 className="font-bold text-lg">User List:</h3>
+        {users.map((user, index) => (
+          <p key={index} className="flex flex-col gap-2 px-3 py-4 shadow-md w-96  ">
+            <strong> Name : {user.username}</strong>
+            <strong> Email : {user.email}</strong>
+            <strong>Password :{user.password} </strong>
+          </p>
+        ))}
       </div>
     </div>
   );
