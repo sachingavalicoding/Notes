@@ -40,18 +40,18 @@ const Register = () => {
     }
   };
   return (
-    <div className="w-full h-screen flex flex-col items-center px-4 justify-center pb-20 bg-slate-900">
+    <div className="w-full  h-screen flex flex-col items-center px-6 justify-center pb-20 bg-slate-900">
       <form
         method=""
         onSubmit={handleSubmit}
-        className=" bg-slate-200   py-6 w-full  sm:w-96 h-96 rounded-xl shadow-lg flex justify-center items-center flex-col gap-6 "
+        className=" bg-slate-200   py-6 w-full px-10 md:w-96 h-[30rem] rounded-xl shadow-lg flex  items-center flex-col gap-6 "
       >
         <h2 className="font-semibold text-red-400 uppercase text-4xl ">
           {" "}
           Sign Up{" "}
         </h2>
         <input
-          className="px-6 py-3 rounded-lg shadow-2xl border-1 border-black "
+          className="px-6 py-3 w-full rounded-lg shadow-2xl border-1 border-black "
           type="text"
           name="username"
           id="username"
@@ -61,7 +61,7 @@ const Register = () => {
           required
         />
         <input
-          className="px-6 py-3 rounded-lg shadow-2xl border-1 border-black "
+          className="px-6 w-full py-3 rounded-lg shadow-2xl border-1 border-black "
           type="email"
           name="email"
           id="email"
@@ -71,7 +71,7 @@ const Register = () => {
           required
         />
         <input
-          className="px-6 py-3 rounded-lg shadow-2xl border-1 border-black "
+          className="px-6  w-full py-3 rounded-lg shadow-2xl border-1 border-black "
           type="password"
           name="password"
           id="password"

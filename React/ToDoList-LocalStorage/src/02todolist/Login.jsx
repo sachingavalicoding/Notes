@@ -60,14 +60,14 @@ const Login = () => {
   };
 
   return (
-    <div className="w-full h-screen bg-slate-900 flex flex-col items-center px-4 justify-center pb-20">
+    <div className="w-full  h-screen flex flex-col items-center px-6 justify-center pb-20 bg-slate-900">
       <form
         onSubmit={handleSubmit}
-        className="bg-slate-200 py-6 w-full sm:w-96 h-96 rounded-xl shadow-lg flex justify-center items-center flex-col gap-6"
+        className=" bg-slate-200   py-6 w-full px-10 md:w-96 h-[23rem] rounded-xl shadow-lg flex  items-center flex-col gap-6"
       >
         <h2 className="font-semibold text-red-400 uppercase text-4xl">Login</h2>
         <input
-          className="px-6 py-3 rounded-lg shadow-2xl border-1 border-black"
+          className="px-6 w-full py-3 rounded-lg shadow-2xl border-1 border-black"
           type="email"
           name="email"
           id="email"
@@ -77,7 +77,7 @@ const Login = () => {
           required
         />
         <input
-          className="px-6 py-3 rounded-lg shadow-2xl border-1 border-black"
+          className="px-6 w-full py-3 rounded-lg shadow-2xl border-1 border-black"
           type="password"
           name="password"
           id="password"
@@ -95,7 +95,7 @@ const Login = () => {
         >
           Sign in
         </button>
-        <Link to={"/login"}> Create an account  ?<span className="text-xl text-red-400 font-semibold"> Register</span> </Link>
+        <Link to={"/register"}> Create an account  ?<span className="text-xl text-red-400 font-semibold"> Register</span> </Link>
       </div>
       </form>
     </div>
